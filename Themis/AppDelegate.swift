@@ -38,15 +38,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             audioRecorder.meteringEnabled = true
 
             NSOperationQueue().addOperationWithBlock({[weak self] in
+                let PERIOD = 1.0
+                let PERIODS_PER_POINT = 10
                 repeat {
-                    NSThread.sleepForTimeInterval(10)// ten seconds
-                    audioRecorder.updateMeters()
-                    let average = (NSInteger)(audioRecorder.averagePowerForChannel(0)) + 120 - 15 // 15 dB seems the approx correction
-                    let peak = (NSInteger)(audioRecorder.peakPowerForChannel(0)) + 120 - 15// 15 dB seems the approx correction
+                    var sum = 0
+                    var peak = -9999999
+                    var steps = 0
+                    repeat {
+                        NSThread.sleepForTimeInterval(PERIOD)
+                        audioRecorder.updateMeters()
+                        sum += (NSInteger)(audioRecorder.averagePowerForChannel(0))
+                        peak = max(peak, (NSInteger)(audioRecorder.peakPowerForChannel(0)))
+                        steps += 1
+                    } while (steps <= PERIODS_PER_POINT)
+                    
+                    let average = sum / steps + 120 - 20 // seems to be the approx correction
+                    peak += 120 - 20 // seems to be the approx correction
                     let dblevels: [String: NSInteger] = ["average": average, "peak": peak]
                     self?.performSelectorOnMainThread(#selector(AppDelegate.recordDatapoint), withObject: dblevels, waitUntilDone: false)
-                }
-                    while (true)
+                } while (true)
+                
                 })
             
         } catch {
@@ -74,10 +85,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let average = dblevels["average"]! as NSInteger
         let peak = dblevels["peak"]! as NSInteger
+        let deviceName = UIDevice.currentDevice().name
         let body = [
             "series": [
-                ["metric": "office.dblevel.average", "host": "testing", "points":[[Timestamp, average]] ],
-                ["metric": "office.dblevel.peak", "host": "testing", "points":[[Timestamp, peak]] ]
+                ["metric": "office.dblevel.average", "host": deviceName, "points":[[Timestamp, average]] ],
+                ["metric": "office.dblevel.peak", "host": deviceName, "points":[[Timestamp, peak]] ]
             ]
         ]
         request.HTTPBody = try! NSJSONSerialization.dataWithJSONObject(body, options: [])
