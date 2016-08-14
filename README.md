@@ -1,7 +1,7 @@
 # Themis
 Themis is small iOS app for recording noise dB levels to Datadog.
 
-![](https://cloudup.com/c5NobzqK4dY+)
+<img src="https://cldup.com/EkS0bQR9T1.png" width="200">
 
 ### Goal
 - Noise is distracting many people at the company
