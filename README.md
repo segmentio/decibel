@@ -10,7 +10,7 @@ Themis is small iOS app for recording noise dB levels to Datadog.
 ### Dashboard
 Datadog dashboard here: https://app.datadoghq.com/screen/110507
 
-![](https://cloudup.com/chjOM9NLgmJ+)
+![](https://cloudup.com/cmtcIxPLwUE+)
 
 ### App
 <img src="https://cldup.com/EkS0bQR9T1.png" width="200">
