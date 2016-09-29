@@ -1,5 +1,5 @@
-# Themis
-Themis is small iOS app for recording noise dB levels to Datadog.
+# Decibel
+Decibel is small iOS app for recording office noise dB levels to Datadog.
 
 ### Goal
 - Noise is distracting many people at the company

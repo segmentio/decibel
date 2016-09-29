@@ -1,15 +1,15 @@
 //
-//  ThemisTests.swift
-//  ThemisTests
+//  DecibelTests.swift
+//  DecibelTests
 //
 //  Created by Peter Reinhardt on 8/13/16.
 //  Copyright © 2016 Peter Reinhardt. All rights reserved.
 //
 
 import XCTest
-@testable import Themis
+@testable import Decibel
 
-class ThemisTests: XCTestCase {
+class DecibelTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

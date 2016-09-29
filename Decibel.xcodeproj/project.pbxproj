@@ -11,8 +11,8 @@
 		D0A430101D5FC545000EAF20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4300F1D5FC545000EAF20 /* ViewController.swift */; };
 		D0A430131D5FC545000EAF20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A430111D5FC545000EAF20 /* Main.storyboard */; };
 		D0A430181D5FC545000EAF20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A430161D5FC545000EAF20 /* LaunchScreen.storyboard */; };
-		D0A430231D5FC545000EAF20 /* ThemisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A430221D5FC545000EAF20 /* ThemisTests.swift */; };
-		D0A4302E1D5FC545000EAF20 /* ThemisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4302D1D5FC545000EAF20 /* ThemisUITests.swift */; };
+		D0A430231D5FC545000EAF20 /* DecibelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A430221D5FC545000EAF20 /* DecibelTests.swift */; };
+		D0A4302E1D5FC545000EAF20 /* DecibelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4302D1D5FC545000EAF20 /* DecibelUITests.swift */; };
 		D0A4303C1D5FEA15000EAF20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A4303B1D5FEA15000EAF20 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -22,29 +22,29 @@
 			containerPortal = D0A430021D5FC544000EAF20 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D0A430091D5FC545000EAF20;
-			remoteInfo = Themis;
+			remoteInfo = Decibel;
 		};
 		D0A4302A1D5FC545000EAF20 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D0A430021D5FC544000EAF20 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D0A430091D5FC545000EAF20;
-			remoteInfo = Themis;
+			remoteInfo = Decibel;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D0A4300A1D5FC545000EAF20 /* Themis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Themis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0A4300A1D5FC545000EAF20 /* Decibel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Decibel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A4300D1D5FC545000EAF20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A4300F1D5FC545000EAF20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0A430121D5FC545000EAF20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0A430171D5FC545000EAF20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0A430191D5FC545000EAF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0A4301E1D5FC545000EAF20 /* ThemisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThemisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0A430221D5FC545000EAF20 /* ThemisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemisTests.swift; sourceTree = "<group>"; };
+		D0A4301E1D5FC545000EAF20 /* DecibelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecibelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0A430221D5FC545000EAF20 /* DecibelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecibelTests.swift; sourceTree = "<group>"; };
 		D0A430241D5FC545000EAF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0A430291D5FC545000EAF20 /* ThemisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThemisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0A4302D1D5FC545000EAF20 /* ThemisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemisUITests.swift; sourceTree = "<group>"; };
+		D0A430291D5FC545000EAF20 /* DecibelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecibelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0A4302D1D5FC545000EAF20 /* DecibelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecibelUITests.swift; sourceTree = "<group>"; };
 		D0A4302F1D5FC545000EAF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0A4303B1D5FEA15000EAF20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,9 +77,9 @@
 		D0A430011D5FC544000EAF20 = {
 			isa = PBXGroup;
 			children = (
-				D0A4300C1D5FC545000EAF20 /* Themis */,
-				D0A430211D5FC545000EAF20 /* ThemisTests */,
-				D0A4302C1D5FC545000EAF20 /* ThemisUITests */,
+				D0A4300C1D5FC545000EAF20 /* Decibel */,
+				D0A430211D5FC545000EAF20 /* DecibelTests */,
+				D0A4302C1D5FC545000EAF20 /* DecibelUITests */,
 				D0A4300B1D5FC545000EAF20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,14 +87,14 @@
 		D0A4300B1D5FC545000EAF20 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D0A4300A1D5FC545000EAF20 /* Themis.app */,
-				D0A4301E1D5FC545000EAF20 /* ThemisTests.xctest */,
-				D0A430291D5FC545000EAF20 /* ThemisUITests.xctest */,
+				D0A4300A1D5FC545000EAF20 /* Decibel.app */,
+				D0A4301E1D5FC545000EAF20 /* DecibelTests.xctest */,
+				D0A430291D5FC545000EAF20 /* DecibelUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D0A4300C1D5FC545000EAF20 /* Themis */ = {
+		D0A4300C1D5FC545000EAF20 /* Decibel */ = {
 			isa = PBXGroup;
 			children = (
 				D0A4300D1D5FC545000EAF20 /* AppDelegate.swift */,
@@ -104,33 +104,33 @@
 				D0A430161D5FC545000EAF20 /* LaunchScreen.storyboard */,
 				D0A430191D5FC545000EAF20 /* Info.plist */,
 			);
-			path = Themis;
+			path = Decibel;
 			sourceTree = "<group>";
 		};
-		D0A430211D5FC545000EAF20 /* ThemisTests */ = {
+		D0A430211D5FC545000EAF20 /* DecibelTests */ = {
 			isa = PBXGroup;
 			children = (
-				D0A430221D5FC545000EAF20 /* ThemisTests.swift */,
+				D0A430221D5FC545000EAF20 /* DecibelTests.swift */,
 				D0A430241D5FC545000EAF20 /* Info.plist */,
 			);
-			path = ThemisTests;
+			path = DecibelTests;
 			sourceTree = "<group>";
 		};
-		D0A4302C1D5FC545000EAF20 /* ThemisUITests */ = {
+		D0A4302C1D5FC545000EAF20 /* DecibelUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D0A4302D1D5FC545000EAF20 /* ThemisUITests.swift */,
+				D0A4302D1D5FC545000EAF20 /* DecibelUITests.swift */,
 				D0A4302F1D5FC545000EAF20 /* Info.plist */,
 			);
-			path = ThemisUITests;
+			path = DecibelUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D0A430091D5FC545000EAF20 /* Themis */ = {
+		D0A430091D5FC545000EAF20 /* Decibel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0A430321D5FC545000EAF20 /* Build configuration list for PBXNativeTarget "Themis" */;
+			buildConfigurationList = D0A430321D5FC545000EAF20 /* Build configuration list for PBXNativeTarget "Decibel" */;
 			buildPhases = (
 				D0A430061D5FC545000EAF20 /* Sources */,
 				D0A430071D5FC545000EAF20 /* Frameworks */,
@@ -140,14 +140,14 @@
 			);
 			dependencies = (
 			);
-			name = Themis;
-			productName = Themis;
-			productReference = D0A4300A1D5FC545000EAF20 /* Themis.app */;
+			name = Decibel;
+			productName = Decibel;
+			productReference = D0A4300A1D5FC545000EAF20 /* Decibel.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D0A4301D1D5FC545000EAF20 /* ThemisTests */ = {
+		D0A4301D1D5FC545000EAF20 /* DecibelTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0A430351D5FC545000EAF20 /* Build configuration list for PBXNativeTarget "ThemisTests" */;
+			buildConfigurationList = D0A430351D5FC545000EAF20 /* Build configuration list for PBXNativeTarget "DecibelTests" */;
 			buildPhases = (
 				D0A4301A1D5FC545000EAF20 /* Sources */,
 				D0A4301B1D5FC545000EAF20 /* Frameworks */,
@@ -158,14 +158,14 @@
 			dependencies = (
 				D0A430201D5FC545000EAF20 /* PBXTargetDependency */,
 			);
-			name = ThemisTests;
-			productName = ThemisTests;
-			productReference = D0A4301E1D5FC545000EAF20 /* ThemisTests.xctest */;
+			name = DecibelTests;
+			productName = DecibelTests;
+			productReference = D0A4301E1D5FC545000EAF20 /* DecibelTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D0A430281D5FC545000EAF20 /* ThemisUITests */ = {
+		D0A430281D5FC545000EAF20 /* DecibelUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0A430381D5FC545000EAF20 /* Build configuration list for PBXNativeTarget "ThemisUITests" */;
+			buildConfigurationList = D0A430381D5FC545000EAF20 /* Build configuration list for PBXNativeTarget "DecibelUITests" */;
 			buildPhases = (
 				D0A430251D5FC545000EAF20 /* Sources */,
 				D0A430261D5FC545000EAF20 /* Frameworks */,
@@ -176,9 +176,9 @@
 			dependencies = (
 				D0A4302B1D5FC545000EAF20 /* PBXTargetDependency */,
 			);
-			name = ThemisUITests;
-			productName = ThemisUITests;
-			productReference = D0A430291D5FC545000EAF20 /* ThemisUITests.xctest */;
+			name = DecibelUITests;
+			productName = DecibelUITests;
+			productReference = D0A430291D5FC545000EAF20 /* DecibelUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					D0A430091D5FC545000EAF20 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 42TU4CB22M;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -209,7 +210,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D0A430051D5FC545000EAF20 /* Build configuration list for PBXProject "Themis" */;
+			buildConfigurationList = D0A430051D5FC545000EAF20 /* Build configuration list for PBXProject "Decibel" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -222,9 +223,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D0A430091D5FC545000EAF20 /* Themis */,
-				D0A4301D1D5FC545000EAF20 /* ThemisTests */,
-				D0A430281D5FC545000EAF20 /* ThemisUITests */,
+				D0A430091D5FC545000EAF20 /* Decibel */,
+				D0A4301D1D5FC545000EAF20 /* DecibelTests */,
+				D0A430281D5FC545000EAF20 /* DecibelUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -270,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0A430231D5FC545000EAF20 /* ThemisTests.swift in Sources */,
+				D0A430231D5FC545000EAF20 /* DecibelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0A4302E1D5FC545000EAF20 /* ThemisUITests.swift in Sources */,
+				D0A4302E1D5FC545000EAF20 /* DecibelUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,12 +288,12 @@
 /* Begin PBXTargetDependency section */
 		D0A430201D5FC545000EAF20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D0A430091D5FC545000EAF20 /* Themis */;
+			target = D0A430091D5FC545000EAF20 /* Decibel */;
 			targetProxy = D0A4301F1D5FC545000EAF20 /* PBXContainerItemProxy */;
 		};
 		D0A4302B1D5FC545000EAF20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D0A430091D5FC545000EAF20 /* Themis */;
+			target = D0A430091D5FC545000EAF20 /* Decibel */;
 			targetProxy = D0A4302A1D5FC545000EAF20 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -404,10 +405,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Themis/Info.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Decibel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pk.rein.Themis;
+				PRODUCT_BUNDLE_IDENTIFIER = pk.rein.Decibel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -415,10 +420,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Themis/Info.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Decibel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pk.rein.Themis;
+				PRODUCT_BUNDLE_IDENTIFIER = pk.rein.Decibel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -426,11 +435,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ThemisTests/Info.plist;
+				INFOPLIST_FILE = DecibelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pk.rein.ThemisTests;
+				PRODUCT_BUNDLE_IDENTIFIER = pk.rein.DecibelTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Themis.app/Themis";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Decibel.app/Decibel";
 			};
 			name = Debug;
 		};
@@ -438,40 +447,40 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ThemisTests/Info.plist;
+				INFOPLIST_FILE = DecibelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pk.rein.ThemisTests;
+				PRODUCT_BUNDLE_IDENTIFIER = pk.rein.DecibelTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Themis.app/Themis";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Decibel.app/Decibel";
 			};
 			name = Release;
 		};
 		D0A430391D5FC545000EAF20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = ThemisUITests/Info.plist;
+				INFOPLIST_FILE = DecibelUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pk.rein.ThemisUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = pk.rein.DecibelUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Themis;
+				TEST_TARGET_NAME = Decibel;
 			};
 			name = Debug;
 		};
 		D0A4303A1D5FC545000EAF20 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = ThemisUITests/Info.plist;
+				INFOPLIST_FILE = DecibelUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pk.rein.ThemisUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = pk.rein.DecibelUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Themis;
+				TEST_TARGET_NAME = Decibel;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D0A430051D5FC545000EAF20 /* Build configuration list for PBXProject "Themis" */ = {
+		D0A430051D5FC545000EAF20 /* Build configuration list for PBXProject "Decibel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0A430301D5FC545000EAF20 /* Debug */,
@@ -480,29 +489,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D0A430321D5FC545000EAF20 /* Build configuration list for PBXNativeTarget "Themis" */ = {
+		D0A430321D5FC545000EAF20 /* Build configuration list for PBXNativeTarget "Decibel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0A430331D5FC545000EAF20 /* Debug */,
 				D0A430341D5FC545000EAF20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		D0A430351D5FC545000EAF20 /* Build configuration list for PBXNativeTarget "ThemisTests" */ = {
+		D0A430351D5FC545000EAF20 /* Build configuration list for PBXNativeTarget "DecibelTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0A430361D5FC545000EAF20 /* Debug */,
 				D0A430371D5FC545000EAF20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		D0A430381D5FC545000EAF20 /* Build configuration list for PBXNativeTarget "ThemisUITests" */ = {
+		D0A430381D5FC545000EAF20 /* Build configuration list for PBXNativeTarget "DecibelUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0A430391D5FC545000EAF20 /* Debug */,
 				D0A4303A1D5FC545000EAF20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

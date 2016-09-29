@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Themis
+//  Decibel
 //
 //  Created by Peter Reinhardt on 8/13/16.
 //  Copyright © 2016 Peter Reinhardt. All rights reserved.

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0A430091D5FC545000EAF20"
-               BuildableName = "Themis.app"
-               BlueprintName = "Themis"
-               ReferencedContainer = "container:Themis.xcodeproj">
+               BuildableName = "Decibel.app"
+               BlueprintName = "Decibel"
+               ReferencedContainer = "container:Decibel.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0A4301D1D5FC545000EAF20"
-               BuildableName = "ThemisTests.xctest"
-               BlueprintName = "ThemisTests"
-               ReferencedContainer = "container:Themis.xcodeproj">
+               BuildableName = "DecibelTests.xctest"
+               BlueprintName = "DecibelTests"
+               ReferencedContainer = "container:Decibel.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0A430281D5FC545000EAF20"
-               BuildableName = "ThemisUITests.xctest"
-               BlueprintName = "ThemisUITests"
-               ReferencedContainer = "container:Themis.xcodeproj">
+               BuildableName = "DecibelUITests.xctest"
+               BlueprintName = "DecibelUITests"
+               ReferencedContainer = "container:Decibel.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0A430091D5FC545000EAF20"
-            BuildableName = "Themis.app"
-            BlueprintName = "Themis"
-            ReferencedContainer = "container:Themis.xcodeproj">
+            BuildableName = "Decibel.app"
+            BlueprintName = "Decibel"
+            ReferencedContainer = "container:Decibel.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0A430091D5FC545000EAF20"
-            BuildableName = "Themis.app"
-            BlueprintName = "Themis"
-            ReferencedContainer = "container:Themis.xcodeproj">
+            BuildableName = "Decibel.app"
+            BlueprintName = "Decibel"
+            ReferencedContainer = "container:Decibel.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0A430091D5FC545000EAF20"
-            BuildableName = "Themis.app"
-            BlueprintName = "Themis"
-            ReferencedContainer = "container:Themis.xcodeproj">
+            BuildableName = "Decibel.app"
+            BlueprintName = "Decibel"
+            ReferencedContainer = "container:Decibel.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
