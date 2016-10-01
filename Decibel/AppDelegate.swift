@@ -27,49 +27,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        var audioRecorder:AVAudioRecorder!
-        
-        let recordSettings = [AVSampleRateKey : NSNumber(value: Float(44100.0) as Float),
-                              AVFormatIDKey : NSNumber(value: Int32(kAudioFormatMPEG4AAC) as Int32),
-                              AVNumberOfChannelsKey : NSNumber(value: 1 as Int32),
-                              AVEncoderAudioQualityKey : NSNumber(value: Int32(AVAudioQuality.medium.rawValue) as Int32)]
-        
+        let recordSettings: [String: Any] = [
+            AVSampleRateKey:   44100.0,
+            AVFormatIDKey : Int32(kAudioFormatMPEG4AAC),
+            AVNumberOfChannelsKey : 1,
+            AVEncoderAudioQualityKey : Int32(AVAudioQuality.medium.rawValue),
+        ]
         let audioSession = AVAudioSession.sharedInstance()
+        
         do {
             try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
-            try audioRecorder = AVAudioRecorder(url: directoryURL()!,
-                                                settings: recordSettings)
-            audioRecorder.prepareToRecord()
             try audioSession.setActive(true)
-            audioRecorder.record()
-            audioRecorder.isMeteringEnabled = true
-
-            OperationQueue().addOperation({[weak self] in
-                let PERIOD = 1.0
-                let PERIODS_PER_POINT = 10
-                repeat {
-                    var sum = 0
-                    var peak = -9999999
-                    var steps = 0
-                    repeat {
-                        Thread.sleep(forTimeInterval: PERIOD)
-                        audioRecorder.updateMeters()
-                        sum += (NSInteger)(audioRecorder.averagePower(forChannel: 0))
-                        peak = max(peak, (NSInteger)(audioRecorder.peakPower(forChannel: 0)))
-                        steps += 1
-                    } while (steps <= PERIODS_PER_POINT)
-                    
-                    let average = sum / steps + 120 - 20 // seems to be the approx correction
-                    peak += 120 - 20 // seems to be the approx correction
-                    let dblevels: [String: NSInteger] = ["average": average, "peak": peak]
-                    self?.performSelector(onMainThread: #selector(AppDelegate.recordDatapoint), with: dblevels, waitUntilDone: false)
-                } while (true)
-                
-                })
             
-        } catch {
+            if let url = directoryURL(),
+                let audioRecorder = try? AVAudioRecorder(url: url, settings: recordSettings) {
+                startRecording(audioRecorder: audioRecorder)
+            }
+        } catch let err {
+            print("Unable to record audio", err)
         }
         
         return true
@@ -83,15 +59,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return soundURL
     }
     
+    
+    func startRecording(audioRecorder: AVAudioRecorder) {
+        audioRecorder.prepareToRecord()
+        audioRecorder.record()
+        audioRecorder.isMeteringEnabled = true
+        OperationQueue().addOperation({[weak self] in
+            let PERIOD = 1.0
+            let PERIODS_PER_POINT = 10
+            repeat {
+                var sum = 0
+                var peak = -9999999
+                var steps = 0
+                repeat {
+                    Thread.sleep(forTimeInterval: PERIOD)
+                    audioRecorder.updateMeters()
+                    sum += (NSInteger)(audioRecorder.averagePower(forChannel: 0))
+                    peak = max(peak, (NSInteger)(audioRecorder.peakPower(forChannel: 0)))
+                    steps += 1
+                } while (steps <= PERIODS_PER_POINT)
+                
+                let average = sum / steps + 120 - 20 // seems to be the approx correction
+                peak += 120 - 20 // seems to be the approx correction
+                let dblevels: [String: NSInteger] = ["average": average, "peak": peak]
+                self?.performSelector(onMainThread: #selector(AppDelegate.recordDatapoint), with: dblevels, waitUntilDone: false)
+                
+            } while (true)
+        })
+    }
+    
+    
     func recordDatapoint(_ dblevels: [String: NSInteger]) {
-        
         // Send a single datapoint to DataDog
         let datadogUrlString = "https://app.datadoghq.com/api/v1/series?api_key=\(DATADOG_KEY)"
-        let datadogUrl = URL(string: datadogUrlString);
-        
-        let request = NSMutableURLRequest(url:datadogUrl!);
-        request.httpMethod = "POST"
-        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         
         let average = dblevels["average"]! as NSInteger
         let peak = dblevels["peak"]! as NSInteger
@@ -102,22 +102,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 ["metric": "office.dblevel.peak", "host": deviceName, "points":[[Timestamp, peak]] ]
             ]
         ]
-        request.httpBody = try! JSONSerialization.data(withJSONObject: body, options: [])
-        print(body)
         
-        let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: {
-            data, response, error in
-            
-            if error != nil
-            {
+        guard let datadogUrl = URL(string: datadogUrlString),
+            let httpBody = try? JSONSerialization.data(withJSONObject: body, options: []) else {
+            print("Bad URL or body")
+            return
+        }
+        print("Will send request to \(datadogUrl)", body)
+        
+        let request = NSMutableURLRequest(url: datadogUrl)
+        request.httpMethod = "POST"
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.httpBody = httpBody
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { data, response, error in
+            if let error = error {
                 print("error=\(error)")
                 return
             }
-            
-            let responseString = String(data: data!, encoding: String.Encoding.utf8)
-            print("responseString = \(responseString)")
-        }) 
-        
+            if let data = data {
+                let responseString = String(data: data, encoding: String.Encoding.utf8)
+                print("responseString = \(responseString)")
+                return
+            }
+            print("Neither error nor data was provided")
+        }
         task.resume()
     }
 
