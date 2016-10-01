@@ -9,10 +9,6 @@
 import UIKit
 import AVFoundation
 
-var Timestamp: NSInteger {
-    return (NSInteger)(Date().timeIntervalSince1970)
-}
-
 /*
  NOTE: PLEASE PUT YOUR DATADOG KEY BELOW
  */
@@ -35,12 +31,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
         
-        let recordSettings: [String: Any] = [
-            AVSampleRateKey:   44100.0,
-            AVFormatIDKey : Int32(kAudioFormatMPEG4AAC),
-            AVNumberOfChannelsKey : 1,
-            AVEncoderAudioQualityKey : Int32(AVAudioQuality.medium.rawValue),
+        let recordSettings = [
+            AVSampleRateKey : NSNumber(value: Float(44100.0) as Float),
+            AVFormatIDKey : NSNumber(value: Int32(kAudioFormatMPEG4AAC) as Int32),
+            AVNumberOfChannelsKey : NSNumber(value: 1 as Int32),
+            AVEncoderAudioQualityKey : NSNumber(value: Int32(AVAudioQuality.medium.rawValue) as Int32),
         ]
+
         let audioSession = AVAudioSession.sharedInstance()
         
         do {
@@ -91,10 +88,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let average = dblevels["average"]! as NSInteger
         let peak = dblevels["peak"]! as NSInteger
         let deviceName = UIDevice.current.name
+        let timestamp = (NSInteger)(Date().timeIntervalSince1970)
         let body = [
             "series": [
-                ["metric": "office.dblevel.average", "host": deviceName, "points":[[Timestamp, average]] ],
-                ["metric": "office.dblevel.peak", "host": deviceName, "points":[[Timestamp, peak]] ]
+                ["metric": "office.dblevel.average", "host": deviceName, "points": [ [timestamp, average] ] ],
+                ["metric": "office.dblevel.peak", "host": deviceName, "points":[ [timestamp, peak] ] ],
             ]
         ]
         
