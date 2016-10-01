@@ -14,7 +14,7 @@ Datadog dashboard here: https://app.datadoghq.com/screen/110507
 
 ![](https://cloudup.com/cmtcIxPLwUE+)
 
-* 12am-1am: Tony playing loud music on dance floor
+* 12am-1am: our security guard playing loud music on dance floor (on request to collect data!)
 * 7:30am: people start showing up at the office
 * 12pm-12:30pm: lunchtime
 * 1:30pm-1:50pm: rebranding launch celebration
