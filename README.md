@@ -21,5 +21,6 @@ Datadog dashboard here: https://app.datadoghq.com/screen/110507
 * 2:30pm: team offsite, ~20 people headed out
 
 ### App
-<img src="https://cldup.com/EkS0bQR9T1.png" width="200">
+
+<img src="https://cldup.com/vXQwJJoM42.png" width="200">
 
