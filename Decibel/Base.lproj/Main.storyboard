@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="CircularStd-Book.otf">
+        <array key="CircularStd-Book.otf">
             <string>CircularStd-Book</string>
-            <string>CircularStd-Book</string>
-        </mutableArray>
-        <mutableArray key="CircularStd-Medium.otf">
+        </array>
+        <array key="CircularStd-Medium.otf">
             <string>CircularStd-Medium</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
@@ -24,29 +24,25 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="694" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound decibel data is being recorded." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LU7-4c-5aj">
-                                <rect key="frame" x="202" y="719" width="289" height="22"/>
                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
-                                <color key="textColor" red="0.98432320356369019" green="0.98051029443740845" blue="0.97614568471908569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="highlightedColor" red="0.0" green="0.15294117647058825" blue="0.35294117647058826" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.98013216257095337" green="0.97551059722900391" blue="0.96998405456542969" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.15294117647058825" blue="0.35294117647058826" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w45-uc-Qg8">
-                                <rect key="frame" x="337" y="402" width="19" height="22"/>
                                 <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
-                                <color key="textColor" red="0.98432320356369019" green="0.98051029443740845" blue="0.97614568471908569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="highlightedColor" red="0.0" green="0.1529411765" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.98013216257095337" green="0.97551059722900391" blue="0.96998405456542969" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.1529411765" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decibel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXl-hg-9ZD">
-                                <rect key="frame" x="259" y="322" width="175" height="63.5"/>
                                 <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="50"/>
-                                <color key="textColor" red="0.98432320356369019" green="0.98051029443740845" blue="0.97614568471908569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="highlightedColor" red="0.0" green="0.1529411765" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.98013216257095337" green="0.97551059722900391" blue="0.96998405456542969" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.1529411765" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2016-08-13 at 4.55.37 PM" translatesAutoresizingMaskIntoConstraints="NO" id="AxC-t3-XFi">
-                                <rect key="frame" x="302" y="440" width="90" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="AxC-t3-XFi" secondAttribute="height" multiplier="15:8" id="Kbs-cA-lrv"/>
                                     <constraint firstAttribute="height" constant="48" id="Teu-Wg-svP"/>
@@ -61,7 +57,7 @@
                                 </variation>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0096482251179383499" green="0.21030858471761427" blue="0.42777347359100726" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0096482251179383499" green="0.21030858471761427" blue="0.42777347359100726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="w45-uc-Qg8" firstAttribute="top" secondItem="KXl-hg-9ZD" secondAttribute="bottom" constant="16" id="4Rx-u1-Rea"/>
                             <constraint firstItem="w45-uc-Qg8" firstAttribute="centerX" secondItem="KXl-hg-9ZD" secondAttribute="centerX" id="Qus-eV-SuS"/>
@@ -79,8 +75,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad-2/3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
