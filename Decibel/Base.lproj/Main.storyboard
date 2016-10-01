@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="CircularStd-Book.otf">
+            <string>CircularStd-Book</string>
+            <string>CircularStd-Book</string>
+        </mutableArray>
+        <mutableArray key="CircularStd-Medium.otf">
+            <string>CircularStd-Medium</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -14,24 +24,67 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="694" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sound decibel data is being recorded." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LU7-4c-5aj">
-                                <rect key="frame" x="41" y="286" width="290" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound decibel data is being recorded." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LU7-4c-5aj">
+                                <rect key="frame" x="202" y="719" width="289" height="22"/>
+                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                <color key="textColor" red="0.98432320356369019" green="0.98051029443740845" blue="0.97614568471908569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.0" green="0.15294117647058825" blue="0.35294117647058826" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2016-08-13 at 4.55.37 PM" translatesAutoresizingMaskIntoConstraints="NO" id="AxC-t3-XFi">
-                                <rect key="frame" x="66" y="137" width="240" height="128"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w45-uc-Qg8">
+                                <rect key="frame" x="337" y="402" width="19" height="22"/>
+                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                <color key="textColor" red="0.98432320356369019" green="0.98051029443740845" blue="0.97614568471908569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.1529411765" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decibel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXl-hg-9ZD">
+                                <rect key="frame" x="259" y="322" width="175" height="63.5"/>
+                                <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="50"/>
+                                <color key="textColor" red="0.98432320356369019" green="0.98051029443740845" blue="0.97614568471908569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.1529411765" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2016-08-13 at 4.55.37 PM" translatesAutoresizingMaskIntoConstraints="NO" id="AxC-t3-XFi">
+                                <rect key="frame" x="302" y="440" width="90" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AxC-t3-XFi" secondAttribute="height" multiplier="15:8" id="Kbs-cA-lrv"/>
+                                    <constraint firstAttribute="height" constant="48" id="Teu-Wg-svP"/>
+                                    <constraint firstAttribute="width" constant="240" id="Uu8-aI-2b3"/>
+                                    <constraint firstAttribute="height" constant="128" id="bNt-ZA-iIP"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Uu8-aI-2b3"/>
+                                        <exclude reference="bNt-ZA-iIP"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0096482251179383499" green="0.21030858471761427" blue="0.42777347359100726" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="w45-uc-Qg8" firstAttribute="top" secondItem="KXl-hg-9ZD" secondAttribute="bottom" constant="16" id="4Rx-u1-Rea"/>
+                            <constraint firstItem="w45-uc-Qg8" firstAttribute="centerX" secondItem="KXl-hg-9ZD" secondAttribute="centerX" id="Qus-eV-SuS"/>
+                            <constraint firstItem="AxC-t3-XFi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ceN-WG-OqH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AxC-t3-XFi" secondAttribute="bottom" constant="101" id="eyv-oy-wuz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LU7-4c-5aj" secondAttribute="bottom" constant="27" id="iaZ-pX-Rgm"/>
+                            <constraint firstItem="KXl-hg-9ZD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vAD-Sh-Ofg"/>
+                            <constraint firstItem="LU7-4c-5aj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wuZ-3U-isz"/>
+                            <constraint firstItem="KXl-hg-9ZD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="xId-mZ-WV6"/>
+                            <constraint firstItem="AxC-t3-XFi" firstAttribute="top" secondItem="w45-uc-Qg8" secondAttribute="bottom" constant="16" id="yjP-pL-dil"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="eyv-oy-wuz"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad-2/3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-27" y="797"/>
         </scene>
     </scenes>
     <resources>

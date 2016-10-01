@@ -14,6 +14,14 @@
 		D0A430231D5FC545000EAF20 /* DecibelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A430221D5FC545000EAF20 /* DecibelTests.swift */; };
 		D0A4302E1D5FC545000EAF20 /* DecibelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4302D1D5FC545000EAF20 /* DecibelUITests.swift */; };
 		D0A4303C1D5FEA15000EAF20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A4303B1D5FEA15000EAF20 /* Assets.xcassets */; };
+		EA776C1D1D9F33BA001A4F90 /* CircularStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA776C151D9F33BA001A4F90 /* CircularStd-Black.otf */; };
+		EA776C1E1D9F33BA001A4F90 /* CircularStd-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA776C161D9F33BA001A4F90 /* CircularStd-BlackItalic.otf */; };
+		EA776C1F1D9F33BA001A4F90 /* CircularStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA776C171D9F33BA001A4F90 /* CircularStd-Bold.otf */; };
+		EA776C201D9F33BA001A4F90 /* CircularStd-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA776C181D9F33BA001A4F90 /* CircularStd-BoldItalic.otf */; };
+		EA776C211D9F33BA001A4F90 /* CircularStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA776C191D9F33BA001A4F90 /* CircularStd-Book.otf */; };
+		EA776C221D9F33BA001A4F90 /* CircularStd-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA776C1A1D9F33BA001A4F90 /* CircularStd-BookItalic.otf */; };
+		EA776C231D9F33BA001A4F90 /* CircularStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA776C1B1D9F33BA001A4F90 /* CircularStd-Medium.otf */; };
+		EA776C241D9F33BA001A4F90 /* CircularStd-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EA776C1C1D9F33BA001A4F90 /* CircularStd-MediumItalic.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +55,14 @@
 		D0A4302D1D5FC545000EAF20 /* DecibelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecibelUITests.swift; sourceTree = "<group>"; };
 		D0A4302F1D5FC545000EAF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0A4303B1D5FEA15000EAF20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA776C151D9F33BA001A4F90 /* CircularStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Black.otf"; sourceTree = "<group>"; };
+		EA776C161D9F33BA001A4F90 /* CircularStd-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BlackItalic.otf"; sourceTree = "<group>"; };
+		EA776C171D9F33BA001A4F90 /* CircularStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Bold.otf"; sourceTree = "<group>"; };
+		EA776C181D9F33BA001A4F90 /* CircularStd-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BoldItalic.otf"; sourceTree = "<group>"; };
+		EA776C191D9F33BA001A4F90 /* CircularStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Book.otf"; sourceTree = "<group>"; };
+		EA776C1A1D9F33BA001A4F90 /* CircularStd-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-BookItalic.otf"; sourceTree = "<group>"; };
+		EA776C1B1D9F33BA001A4F90 /* CircularStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-Medium.otf"; sourceTree = "<group>"; };
+		EA776C1C1D9F33BA001A4F90 /* CircularStd-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularStd-MediumItalic.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +113,7 @@
 		D0A4300C1D5FC545000EAF20 /* Decibel */ = {
 			isa = PBXGroup;
 			children = (
+				EA776C141D9F33BA001A4F90 /* Circular */,
 				D0A4300D1D5FC545000EAF20 /* AppDelegate.swift */,
 				D0A4300F1D5FC545000EAF20 /* ViewController.swift */,
 				D0A430111D5FC545000EAF20 /* Main.storyboard */,
@@ -123,6 +140,21 @@
 				D0A4302F1D5FC545000EAF20 /* Info.plist */,
 			);
 			path = DecibelUITests;
+			sourceTree = "<group>";
+		};
+		EA776C141D9F33BA001A4F90 /* Circular */ = {
+			isa = PBXGroup;
+			children = (
+				EA776C151D9F33BA001A4F90 /* CircularStd-Black.otf */,
+				EA776C161D9F33BA001A4F90 /* CircularStd-BlackItalic.otf */,
+				EA776C171D9F33BA001A4F90 /* CircularStd-Bold.otf */,
+				EA776C181D9F33BA001A4F90 /* CircularStd-BoldItalic.otf */,
+				EA776C191D9F33BA001A4F90 /* CircularStd-Book.otf */,
+				EA776C1A1D9F33BA001A4F90 /* CircularStd-BookItalic.otf */,
+				EA776C1B1D9F33BA001A4F90 /* CircularStd-Medium.otf */,
+				EA776C1C1D9F33BA001A4F90 /* CircularStd-MediumItalic.otf */,
+			);
+			path = Circular;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,8 +271,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0A430181D5FC545000EAF20 /* LaunchScreen.storyboard in Resources */,
+				EA776C221D9F33BA001A4F90 /* CircularStd-BookItalic.otf in Resources */,
+				EA776C1F1D9F33BA001A4F90 /* CircularStd-Bold.otf in Resources */,
 				D0A4303C1D5FEA15000EAF20 /* Assets.xcassets in Resources */,
+				EA776C241D9F33BA001A4F90 /* CircularStd-MediumItalic.otf in Resources */,
+				EA776C211D9F33BA001A4F90 /* CircularStd-Book.otf in Resources */,
+				EA776C231D9F33BA001A4F90 /* CircularStd-Medium.otf in Resources */,
+				EA776C1D1D9F33BA001A4F90 /* CircularStd-Black.otf in Resources */,
 				D0A430131D5FC545000EAF20 /* Main.storyboard in Resources */,
+				EA776C1E1D9F33BA001A4F90 /* CircularStd-BlackItalic.otf in Resources */,
+				EA776C201D9F33BA001A4F90 /* CircularStd-BoldItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
