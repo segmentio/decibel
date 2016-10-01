@@ -26,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var timer: DispatchSourceTimer?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        if DATADOG_KEY == "YOUR_KEY_HERE" {
+            fatalError("You must update your datadog key to use Decibel")
+        }
         guard let url = directoryURL() else {
             print("Unable to find a init directoryURL")
             return false
@@ -69,9 +72,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         timer?.scheduleRepeating(deadline: .now(), interval: .seconds(1), leeway: .milliseconds(100))
         timer?.setEventHandler { [weak self] in
             audioRecorder.updateMeters()
-            // NOTE: seems to be the approx correction
-            let average = audioRecorder.averagePower(forChannel: 0) + 90
-            let peak = audioRecorder.peakPower(forChannel: 0) + 90
+
+             // NOTE: seems to be the approx correction to get real decibels
+            let correction: Float = 100
+            let average = audioRecorder.averagePower(forChannel: 0) + correction
+            let peak = audioRecorder.peakPower(forChannel: 0) + correction
             self?.recordDatapoint(average: average, peak: peak)
         }
         timer?.resume()
