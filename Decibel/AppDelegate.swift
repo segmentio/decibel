@@ -13,6 +13,15 @@ var Timestamp: NSInteger {
     return (NSInteger)(Date().timeIntervalSince1970)
 }
 
+/*
+ NOTE: PLEASE PUT YOUR DATADOG KEY BELOW
+ */
+let DATADOG_KEY = "YOUR KEY HERE"
+/*
+ NOTE: PLEASE PUT YOUR DATADOG KEY ABOVE
+ */
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -75,8 +84,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func recordDatapoint(_ dblevels: [String: NSInteger]) {
+        
         // Send a single datapoint to DataDog
-        let datadogUrlString = "https://app.datadoghq.com/api/v1/series?api_key=ba005fa47ed19c17831154ddde78a6b1"
+        let datadogUrlString = "https://app.datadoghq.com/api/v1/series?api_key=\(DATADOG_KEY)"
         let datadogUrl = URL(string: datadogUrlString);
         
         let request = NSMutableURLRequest(url:datadogUrl!);
