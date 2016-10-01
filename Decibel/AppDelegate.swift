@@ -72,21 +72,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // NOTE: seems to be the approx correction
             let average = audioRecorder.averagePower(forChannel: 0) + 90
             let peak = audioRecorder.peakPower(forChannel: 0) + 90
-            self?.recordDatapoint([
-                "average": NSInteger(average),
-                "peak": NSInteger(peak)
-            ])
+            self?.recordDatapoint(average: average, peak: peak)
         }
         timer?.resume()
     }
     
     
-    func recordDatapoint(_ dblevels: [String: NSInteger]) {
+    func recordDatapoint(average: Float, peak: Float) {
         // Send a single datapoint to DataDog
         let datadogUrlString = "https://app.datadoghq.com/api/v1/series?api_key=\(DATADOG_KEY)"
         
-        let average = dblevels["average"]! as NSInteger
-        let peak = dblevels["peak"]! as NSInteger
         let deviceName = UIDevice.current.name
         let timestamp = (NSInteger)(Date().timeIntervalSince1970)
         let body = [
