@@ -45,9 +45,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         do {
             try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
-            try audioSession.setActive(true)
             let audioRecorder = try AVAudioRecorder(url: url, settings: recordSettings)
-            startRecording(audioRecorder: audioRecorder)
+            audioRecorder.prepareToRecord()
+            audioRecorder.record()
+            try audioSession.setActive(true)
+            audioRecorder.isMeteringEnabled = true
+            recordForever(audioRecorder: audioRecorder)
         } catch let err {
             print("Unable start recording", err)
         }
@@ -63,15 +66,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return soundURL
     }
     
-    func startRecording(audioRecorder: AVAudioRecorder) {
+    func recordForever(audioRecorder: AVAudioRecorder) {
         let queue = DispatchQueue(label: "io.segment.decibel", attributes: .concurrent)
         timer = DispatchSource.makeTimerSource(flags: [], queue: queue)
         timer?.scheduleRepeating(deadline: .now(), interval: .seconds(1), leeway: .milliseconds(100))
-        
-        audioRecorder.prepareToRecord()
-        audioRecorder.record()
-        audioRecorder.isMeteringEnabled = true
-        
         timer?.setEventHandler { [weak self] in
             audioRecorder.updateMeters()
             // NOTE: seems to be the approx correction
