@@ -26,8 +26,15 @@ let DATADOG_KEY = "YOUR_KEY_HERE"
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var timer: DispatchSourceTimer?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        guard let url = directoryURL() else {
+            print("Unable to find a init directoryURL")
+            return false
+        }
+        
         let recordSettings: [String: Any] = [
             AVSampleRateKey:   44100.0,
             AVFormatIDKey : Int32(kAudioFormatMPEG4AAC),
@@ -39,13 +46,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
             try audioSession.setActive(true)
-            
-            if let url = directoryURL(),
-                let audioRecorder = try? AVAudioRecorder(url: url, settings: recordSettings) {
-                startRecording(audioRecorder: audioRecorder)
-            }
+            let audioRecorder = try AVAudioRecorder(url: url, settings: recordSettings)
+            startRecording(audioRecorder: audioRecorder)
         } catch let err {
-            print("Unable to record audio", err)
+            print("Unable start recording", err)
         }
         
         return true
@@ -59,33 +63,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return soundURL
     }
     
-    
     func startRecording(audioRecorder: AVAudioRecorder) {
+        let queue = DispatchQueue(label: "io.segment.decibel", attributes: .concurrent)
+        timer = DispatchSource.makeTimerSource(flags: [], queue: queue)
+        timer?.scheduleRepeating(deadline: .now(), interval: .seconds(1), leeway: .milliseconds(100))
+        
         audioRecorder.prepareToRecord()
         audioRecorder.record()
         audioRecorder.isMeteringEnabled = true
-        OperationQueue().addOperation({[weak self] in
-            let PERIOD = 1.0
-            let PERIODS_PER_POINT = 10
-            repeat {
-                var sum = 0
-                var peak = -9999999
-                var steps = 0
-                repeat {
-                    Thread.sleep(forTimeInterval: PERIOD)
-                    audioRecorder.updateMeters()
-                    sum += (NSInteger)(audioRecorder.averagePower(forChannel: 0))
-                    peak = max(peak, (NSInteger)(audioRecorder.peakPower(forChannel: 0)))
-                    steps += 1
-                } while (steps <= PERIODS_PER_POINT)
-                
-                let average = sum / steps + 120 - 20 // seems to be the approx correction
-                peak += 120 - 20 // seems to be the approx correction
-                let dblevels: [String: NSInteger] = ["average": average, "peak": peak]
-                self?.performSelector(onMainThread: #selector(AppDelegate.recordDatapoint), with: dblevels, waitUntilDone: false)
-                
-            } while (true)
-        })
+        
+        timer?.setEventHandler { [weak self] in
+            audioRecorder.updateMeters()
+            // NOTE: seems to be the approx correction
+            let average = audioRecorder.averagePower(forChannel: 0) + 90
+            let peak = audioRecorder.peakPower(forChannel: 0) + 90
+            self?.recordDatapoint([
+                "average": NSInteger(average),
+                "peak": NSInteger(peak)
+            ])
+        }
+        timer?.resume()
     }
     
     
