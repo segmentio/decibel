@@ -1,5 +1,6 @@
 # Decibel
-Decibel is small iOS app for recording office noise dB levels to Datadog.
+
+Decibel is small iOS app for recording office noise dB levels to Datadog. Read more about it's conception and research uses [here](https://segment.com/blog/how-we-added-10-people-without-hiring-a-soul/).
 
 ### Goal
 - Noise is distracting many people in the office
