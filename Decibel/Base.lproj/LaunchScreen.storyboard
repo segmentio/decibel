@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="CircularStd-Book.otf">
+            <string>CircularStd-Book</string>
+        </array>
+        <array key="CircularStd-Medium.otf">
+            <string>CircularStd-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mFV-i9-RDK"/>
+                        <viewControllerLayoutGuide type="bottom" id="9aP-Ds-xmj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ShN-4E-l4d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcU-QC-bRk">
+                                <fontDescription key="fontDescription" name="CircularStd-Book" family="Circular Std" pointSize="17"/>
+                                <color key="textColor" red="0.98013216260000002" green="0.9755105972" blue="0.96998405460000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.1529411765" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decibel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0HG-D3-Er3">
+                                <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="50"/>
+                                <color key="textColor" red="0.98013216260000002" green="0.9755105972" blue="0.96998405460000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.1529411765" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2016-08-13 at 4.55.37 PM" translatesAutoresizingMaskIntoConstraints="NO" id="fzA-cU-aBr">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fzA-cU-aBr" secondAttribute="height" multiplier="15:8" id="NQg-gD-evk"/>
+                                    <constraint firstAttribute="width" constant="240" id="SAN-T7-9aU"/>
+                                    <constraint firstAttribute="height" constant="48" id="haY-uV-8J1"/>
+                                    <constraint firstAttribute="height" constant="128" id="yXh-4b-Gmg"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SAN-T7-9aU"/>
+                                        <exclude reference="yXh-4b-Gmg"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0096482251180000003" green="0.2103085847" blue="0.42777347360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fzA-cU-aBr" firstAttribute="centerX" secondItem="ShN-4E-l4d" secondAttribute="centerX" id="9la-4b-hyY"/>
+                            <constraint firstItem="fzA-cU-aBr" firstAttribute="top" secondItem="rcU-QC-bRk" secondAttribute="bottom" constant="8" id="SHq-qO-yrE"/>
+                            <constraint firstItem="rcU-QC-bRk" firstAttribute="centerX" secondItem="0HG-D3-Er3" secondAttribute="centerX" id="YIl-TD-Q2R"/>
+                            <constraint firstItem="0HG-D3-Er3" firstAttribute="centerX" secondItem="ShN-4E-l4d" secondAttribute="centerX" id="Zl1-Ib-K85"/>
+                            <constraint firstItem="0HG-D3-Er3" firstAttribute="centerY" secondItem="ShN-4E-l4d" secondAttribute="centerY" constant="-30" id="u40-ci-BtK"/>
+                            <constraint firstItem="rcU-QC-bRk" firstAttribute="top" secondItem="0HG-D3-Er3" secondAttribute="bottom" constant="8" id="zsC-XB-yXE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Screen Shot 2016-08-13 at 4.55.37 PM" width="1070" height="286"/>
+    </resources>
+</document>
