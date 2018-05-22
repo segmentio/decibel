@@ -7,9 +7,6 @@ Decibel is small iOS app for recording office noise dB levels to Datadog. Read m
 - We want to understand the acoustics of the office
 - We want to understand the sources of noise
 
-### Dashboard
-Datadog dashboard here: https://app.datadoghq.com/screen/110507
-
 ### August 31, 2016
 
 ![](https://cloudup.com/cmtcIxPLwUE+)
