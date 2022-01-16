@@ -11,8 +11,6 @@
 		D0A430101D5FC545000EAF20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4300F1D5FC545000EAF20 /* ViewController.swift */; };
 		D0A430131D5FC545000EAF20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A430111D5FC545000EAF20 /* Main.storyboard */; };
 		D0A430181D5FC545000EAF20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A430161D5FC545000EAF20 /* LaunchScreen.storyboard */; };
-		D0A430231D5FC545000EAF20 /* DecibelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A430221D5FC545000EAF20 /* DecibelTests.swift */; };
-		D0A4302E1D5FC545000EAF20 /* DecibelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4302D1D5FC545000EAF20 /* DecibelUITests.swift */; };
 		D0A4303C1D5FEA15000EAF20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A4303B1D5FEA15000EAF20 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -40,11 +38,7 @@
 		D0A430121D5FC545000EAF20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0A430171D5FC545000EAF20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0A430191D5FC545000EAF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0A4301E1D5FC545000EAF20 /* DecibelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecibelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0A430221D5FC545000EAF20 /* DecibelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecibelTests.swift; sourceTree = "<group>"; };
 		D0A430241D5FC545000EAF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0A430291D5FC545000EAF20 /* DecibelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecibelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0A4302D1D5FC545000EAF20 /* DecibelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecibelUITests.swift; sourceTree = "<group>"; };
 		D0A4302F1D5FC545000EAF20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0A4303B1D5FEA15000EAF20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,8 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				D0A4300C1D5FC545000EAF20 /* Decibel */,
-				D0A430211D5FC545000EAF20 /* DecibelTests */,
-				D0A4302C1D5FC545000EAF20 /* DecibelUITests */,
 				D0A4300B1D5FC545000EAF20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				D0A4300A1D5FC545000EAF20 /* Decibel.app */,
-				D0A4301E1D5FC545000EAF20 /* DecibelTests.xctest */,
-				D0A430291D5FC545000EAF20 /* DecibelUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,24 +95,6 @@
 				D0A430191D5FC545000EAF20 /* Info.plist */,
 			);
 			path = Decibel;
-			sourceTree = "<group>";
-		};
-		D0A430211D5FC545000EAF20 /* DecibelTests */ = {
-			isa = PBXGroup;
-			children = (
-				D0A430221D5FC545000EAF20 /* DecibelTests.swift */,
-				D0A430241D5FC545000EAF20 /* Info.plist */,
-			);
-			path = DecibelTests;
-			sourceTree = "<group>";
-		};
-		D0A4302C1D5FC545000EAF20 /* DecibelUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D0A4302D1D5FC545000EAF20 /* DecibelUITests.swift */,
-				D0A4302F1D5FC545000EAF20 /* Info.plist */,
-			);
-			path = DecibelUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,42 +116,6 @@
 			productName = Decibel;
 			productReference = D0A4300A1D5FC545000EAF20 /* Decibel.app */;
 			productType = "com.apple.product-type.application";
-		};
-		D0A4301D1D5FC545000EAF20 /* DecibelTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D0A430351D5FC545000EAF20 /* Build configuration list for PBXNativeTarget "DecibelTests" */;
-			buildPhases = (
-				D0A4301A1D5FC545000EAF20 /* Sources */,
-				D0A4301B1D5FC545000EAF20 /* Frameworks */,
-				D0A4301C1D5FC545000EAF20 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D0A430201D5FC545000EAF20 /* PBXTargetDependency */,
-			);
-			name = DecibelTests;
-			productName = DecibelTests;
-			productReference = D0A4301E1D5FC545000EAF20 /* DecibelTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D0A430281D5FC545000EAF20 /* DecibelUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D0A430381D5FC545000EAF20 /* Build configuration list for PBXNativeTarget "DecibelUITests" */;
-			buildPhases = (
-				D0A430251D5FC545000EAF20 /* Sources */,
-				D0A430261D5FC545000EAF20 /* Frameworks */,
-				D0A430271D5FC545000EAF20 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D0A4302B1D5FC545000EAF20 /* PBXTargetDependency */,
-			);
-			name = DecibelUITests;
-			productName = DecibelUITests;
-			productReference = D0A430291D5FC545000EAF20 /* DecibelUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -227,8 +163,6 @@
 			projectRoot = "";
 			targets = (
 				D0A430091D5FC545000EAF20 /* Decibel */,
-				D0A4301D1D5FC545000EAF20 /* DecibelTests */,
-				D0A430281D5FC545000EAF20 /* DecibelUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -267,22 +201,6 @@
 			files = (
 				D0A430101D5FC545000EAF20 /* ViewController.swift in Sources */,
 				D0A4300E1D5FC545000EAF20 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D0A4301A1D5FC545000EAF20 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D0A430231D5FC545000EAF20 /* DecibelTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D0A430251D5FC545000EAF20 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D0A4302E1D5FC545000EAF20 /* DecibelUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,56 +359,6 @@
 			};
 			name = Release;
 		};
-		D0A430361D5FC545000EAF20 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DecibelTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pk.rein.DecibelTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Decibel.app/Decibel";
-			};
-			name = Debug;
-		};
-		D0A430371D5FC545000EAF20 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = DecibelTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pk.rein.DecibelTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Decibel.app/Decibel";
-			};
-			name = Release;
-		};
-		D0A430391D5FC545000EAF20 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = DecibelUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pk.rein.DecibelUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Decibel;
-			};
-			name = Debug;
-		};
-		D0A4303A1D5FC545000EAF20 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = DecibelUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pk.rein.DecibelUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Decibel;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -508,24 +376,6 @@
 			buildConfigurations = (
 				D0A430331D5FC545000EAF20 /* Debug */,
 				D0A430341D5FC545000EAF20 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D0A430351D5FC545000EAF20 /* Build configuration list for PBXNativeTarget "DecibelTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D0A430361D5FC545000EAF20 /* Debug */,
-				D0A430371D5FC545000EAF20 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D0A430381D5FC545000EAF20 /* Build configuration list for PBXNativeTarget "DecibelUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D0A430391D5FC545000EAF20 /* Debug */,
-				D0A4303A1D5FC545000EAF20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
